@@ -178,6 +178,7 @@ else:
     elif sys.platform == 'darwin':
         COMPILER_SETTINGS['include_dirs'] += ['/opt/local/include']
         COMPILER_SETTINGS['library_dirs'] += ['/opt/local/lib']
+    if sys.platform == 'darwin':
         COMPILER_SETTINGS['libraries'] += ['z']
     COMPILER_SETTINGS['runtime_library_dirs'] = [op.abspath(x) for x in COMPILER_SETTINGS['library_dirs']]
 
